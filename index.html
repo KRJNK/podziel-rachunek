@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Podziel rachunek — napiwek i składka</title>
+<meta name="description" content="Dzielenie rachunku w restauracji: napiwek procentowo, równy podział albo kto ile zamawiał. Bez kłótni przy stole.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍽</text></svg>">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <!-- TODO: link do portfolio, gdy powstanie -->
+  <h1>Podziel rachunek</h1>
+  <p>Ile kto płaci — z napiwkiem, bez liczenia na serwetce.</p>
+  <section class="card">
+    <label>Rachunek (zł) <input id="kw" type="number" min="0" step="any" value="240"></label>
+    <label>Napiwek (%) <input id="tip" type="number" min="0" max="50" value="10"></label>
+    <label>Osób <input id="os" type="number" min="1" max="50" value="4"></label>
+  </section>
+  <section class="card">
+    <h2>Wynik</h2>
+    <div id="out" class="big">—</div>
+    <p id="detail" class="hint"></p>
+  </section>
+  <section class="card">
+    <h2>Jak to działa</h2>
+    <p>Napiwek doliczamy do całego rachunku, a sumę dzielimy równo na liczbę osób. Wynik zaokrąglamy do pełnych złotych w górę przy podziale gotówką (żeby nie zabrakło na napiwek) — przy płatności kartą dokładny podział co do grosza pokazuje linia szczegółów.</p>
+    <p><strong>Przykład:</strong> rachunek 240 zł, napiwek 10%, 4 osoby — razem 264 zł, czyli 66 zł od osoby. W Polsce napiwek 10% to standard przy dobrej obsłudze, 0% gdy doliczono już opłatę serwisową.</p>
+  </section>
+  <div id="ads-slot" hidden></div>
+  <footer><a href="privacy.html">Prywatność</a> · <a href="kontakt.html">Kontakt</a></footer>
+</main>
+<script src="app.js"></script>
+<script src="ads.js"></script>
+</body>
+</html>
